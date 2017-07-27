@@ -1,2 +1,2 @@
 # GoWaterPi
-A plant irigation system based in Raspberry Pi
+A plant irigation system based on Raspberry Pi

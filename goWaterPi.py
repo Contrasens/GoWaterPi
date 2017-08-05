@@ -52,18 +52,7 @@ def setLeds():
     GPIO.output(pinRed,    ledRedStatus)  
     GPIO.output(pinGreen,  ledGreenStatus)  
     GPIO.output(pinYellow, ledYellowStatus)
-    
-def setLeds(red, green, yellow):
-    global ledRedStatus  
-    global ledGreenStatus 
-    global ledYellowStatus
-    ledRedStatus     = red
-    ledGreenStatus   = green
-    ledYellowStatus  = yellow
-    GPIO.output(pinRed,    ledRedStatus)  
-    GPIO.output(pinGreen,  ledGreenStatus)  
-    GPIO.output(pinYellow, ledYellowStatus)
-        
+            
     
 def loop():
      # wait for raising and set bouncetime to prevent the callback function from being called multiple times when the button is pressed

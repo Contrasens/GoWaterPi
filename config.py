@@ -23,4 +23,4 @@ PUMP_TIME = 60
 PUMP_TIME_ON = 18
 
 # Which port should be used by the web-server?
-PORT = 18861
+PORT = 8080

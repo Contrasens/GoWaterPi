@@ -22,5 +22,8 @@ PUMP_TIME = 60
 # At what hour should the pump turn on?  An integer 0-23.
 PUMP_TIME_ON = 18
 
+# Which IP should be used by the web-server?
+SERVER_IP = '192.168.0.214'
+
 # Which port should be used by the web-server?
-PORT = 18861
+PORT = 8080

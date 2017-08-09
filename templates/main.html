@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <head>
-   <title>GoWaterPi Web Server</title>
-   <!-- Latest compiled and minified CSS -->
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-   <!-- Optional theme -->
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
-   <!-- Latest compiled and minified JavaScript -->
-   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
-
-<body>
-   <h1>GoWaterPi Web Server</h1>
-   {% for pin in pins %}
-   <h2>{{ pins[pin].name }}
-   {% if pins[pin].state == true %}
-      is currently <strong>on</strong></h2><div class="row"><div class="col-md-2">
-      <a href="/{{pin}}/off" class="btn btn-block btn-lg btn-default" role="button">Turn off</a></div></div>
-   {% else %}
-      is currently <strong>off</strong></h2><div class="row"><div class="col-md-2">
-      <a href="/{{pin}}/on" class="btn btn-block btn-lg btn-primary" role="button">Turn on</a></div></div>
-   {% endif %}
-   {% endfor %}
+  <div class="alert alert-danger">
+    <strong>Danger!</strong> This web interface is under heavy contruction. Play with care! :)
+  </div>
+<h1>GoWaterPi Web Server</h1>
+{% for pin in pins %}
+{{ pins[pin].name }}
+    {% if pins[pin].state == true %}
+    is currently <strong><font color="red">ON</font></strong>
+    <div class="col-md-2" align="center"><a href="/{{pin}}/off" class="btn btn-lg btn-default">Turn off</a></div>
+    {% else %}
+is currently <strong>OFF</strong></h2>
+    <div class="col-md-2"  align="center"><a href="/{{pin}}/on" class="btn btn-lg btn-primary">Turn on</a></div>
+    {% endif %}
+{% endfor %}
 
 </body>
 </html>

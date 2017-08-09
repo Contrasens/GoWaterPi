@@ -7,7 +7,8 @@ app = Flask(__name__)
 
 from config import (PUMP_AUTO_PIN, PUMP_MANUAL_PIN,
                     GREEN_LED_PIN, YELLOW_LED_PIN,
-                    SWITCH_MANUAL_PIN)
+                    SWITCH_MANUAL_PIN,
+                    SERVER_IP, PORT)
 
 GPIO.setmode(GPIO.BCM)  # Numbers GPIOs by physical location
 
@@ -15,10 +16,10 @@ ledGreenStatus = GPIO.LOW
 ledYellowStatus = GPIO.HIGH
 
 pins = {
-    PUMP_AUTO_PIN: {'name': 'PUMP_AUTO_PIN', 'state': ledYellowStatus},
-    PUMP_MANUAL_PIN: {'name': 'PUMP_MANUAL_PIN', 'state': GPIO.LOW},
-    GREEN_LED_PIN: {'name': 'GREEN_LED_PIN', 'state': ledGreenStatus},
-    YELLOW_LED_PIN: {'name': 'YELLOW_LED_PIN', 'state': ledYellowStatus}
+    PUMP_AUTO_PIN: {'name': 'Pump Automatic Mode', 'state': ledYellowStatus},
+    PUMP_MANUAL_PIN: {'name': 'Pump Manual Mode', 'state': GPIO.LOW},
+    GREEN_LED_PIN: {'name': 'Green LED', 'state': ledGreenStatus},
+    YELLOW_LED_PIN: {'name': 'Yellow LED', 'state': ledYellowStatus}
 }
 
 # Create a dictionary called switches to store the switches pin number, name,
@@ -90,7 +91,6 @@ def loop():
     while True:
         time.sleep(1)  # Don't do anything for 1 second
 
-
 def destroy():
     print "Bye!"
     GPIO.cleanup()  # Release resource
@@ -143,7 +143,7 @@ def action(changePin, action):
 # Program start from here
 if __name__ == '__main__':
     print "GoWaterPi started. Ctrl + C to interrupt."
-    app.run(host='192.168.0.214', port=8080, debug=True)
+    app.run(host=SERVER_IP, port=PORT, debug=True)
     #setup()
     try:
         loop()

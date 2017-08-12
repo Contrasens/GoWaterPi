@@ -13,6 +13,15 @@ YELLOW_LED_PIN = 23
 # Which board pin is the switch for the manual mode connected to?
 SWITCH_MANUAL_PIN = 17
 
+# Which board pin is connected to the temperature sensor?
+TEMPERATURE_PIN = 25
+
+# Which board pin is connected to the soil humidity sensor 1?
+SOIL_SENSOR1_PIN = 18
+
+# Which board pin is connected to the soil humidity sensor 2?
+SOIL_SENSOR2_PIN = 24
+
 # Is the pump plugged into the normally-on socket?
 PUMP_DEFAULT_ON = False
 

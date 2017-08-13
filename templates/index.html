@@ -42,6 +42,18 @@ span {font-weight: bold;}
             });
     });
 
+    $(
+    // periodically (1000ms) do an ajax request to get the water pump state
+    // modify the span tag to reflect the state (On or Off)
+    // the state text comes from the JSON string returned by the server
+    function waterPump()
+    {
+        $.getJSON('/_waterPump', function(data)
+            {
+                $("#pumpState").text(data.pumpState);
+                setTimeout(function(){waterPump();},1000);
+            });
+    });
 
 </script>
 <!-- Simple JQuery Mobile page that display the button state on the breadoard -->
@@ -56,10 +68,11 @@ span {font-weight: bold;}
   <div data-role="content">
     <form>
     <p>Manual mode is <span id="buttonState"></span></p>
+    <p>The water pump is <span id="pumpState"></span></p>
     <br>
-    <select name="flip-1" id="flip-1" data-role="slider" style="float: left;">
-        <option value="manual">Manual</option>
-        <option value="auto">Automatic</option>
+    Change mode to: <select name="flip-1" id="flip-1" data-role="slider" style="float: left;">
+        <option value="manual" default >OFF</option>
+        <option value="auto">ON</option>
     </select>
     </form>
   </div>

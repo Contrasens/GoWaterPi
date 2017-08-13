@@ -18,10 +18,9 @@ def _ledYellow():
     state = request.args.get('state')
     if state == "auto":
         Pins.ledOn(config.YELLOW_LED_PIN)
-        print "Yellow - Auto"
+        Pins.setPump(config.PUMP_MANUAL_PIN, False) # stop manual job of the pump
     if state == "manual":
         Pins.ledOff(config.YELLOW_LED_PIN)
-        print "Yellow - Manual"
     return ""
 
 
@@ -32,10 +31,9 @@ def _ledGreen():
     state = request.args.get('state')
     if state == "auto":
         Pins.ledOff(config.GREEN_LED_PIN)
-        print "Green - Auto"
     if state == "manual":
         Pins.ledOn(config.GREEN_LED_PIN)
-        print "Green - Manual"
+        Pins.setPump(config.PUMP_MANUAL_PIN, True)  # start manual job of the pump
     return ""
 
 
@@ -48,6 +46,17 @@ def _button():
     else:
         state = "not active"
     return jsonify(buttonState=state)
+
+
+# ajax GET call this function periodically to read pump state
+# the state is sent back as json data
+@app.route("/_waterPump")
+def _waterPump():
+    if Pins.readPump(config.PUMP_MANUAL_PIN):
+        state = "active for 5 seconds"
+    else:
+        state = "not active"
+    return jsonify(pumpState=state)
 
 
 def getUptime():

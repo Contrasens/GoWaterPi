@@ -29,10 +29,7 @@ SOIL_SENSOR2_PIN = 24
 PUMP_DEFAULT_ON = False
 
 # How long should the pump run when engaged (in seconds)?
-PUMP_TIME = 60
-
-# At what hour should the pump turn on?  An integer 0-23.
-PUMP_TIME_ON = 18
+PUMP_TIME = 400
 
 
 

@@ -17,6 +17,7 @@ What you need:
  - a submersible water pump (http://www.ebay.de/itm/Comet-Tauchpumpe-ELEGANT-12V-Trinkwasserpumpe-Frischwasserpumpe-Kanisterpumpe)
  - a 12V DC power adapter (used to power up both the water pump AND the Raspberry Pi!)
  - 10mm plastic tube (https://www.ebay.de/sch/sis.html?_itemId=null&_nkw=PVC+Schlauch+glasklar+Aquariumschlauch+Luftschlauch+versch+in+5m+Laengen)
+ - 20x Gardena micro drippers (https://www.amazon.de/Gardena-1391-20-Micro-Drip-System-Regulierbarer-Endtropfer/dp/B0001E3S9U)
  - a water tank (depending on your needs, I used a 60l one: http://www.ebay.de/itm/25-40-60-L-Fass-Weithalsfass-Vorratsfass-Transporttonne-Fass-Camping-Outdoor)
  - a waterproof case big enough to contain all the hardware
  - cable outlets for the box (http://www.ebay.de/itm/Kabelverschraubung-M12-x-1-5-mm-IP67-10x-St%C3%BCck-Verschraubung-3-6-5-mm-grau)

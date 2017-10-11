@@ -15,7 +15,8 @@ What you need:
  - a 8Gb SD card with Raspbian
  - a relay to swotch the water pump (I used this one: https://www.amazon.de/gp/product/B00PIMRGN4)
  - a submersible water pump (http://www.ebay.de/itm/Comet-Tauchpumpe-ELEGANT-12V-Trinkwasserpumpe-Frischwasserpumpe-Kanisterpumpe)
- - a 12V DC power adapter (used to power up both the water pump AND the Raspberry Pi!)
+ - a 12V DC power adapter (used to power up both the water pump AND the Raspberry Pi! - for instance this one: http://www.ebay.de/itm/DC-12V-1A-10A-LED-Trafo-Netzteil-Netzadapter-Driver-fur-LED-RGB-Strip-Streifen-/331515528752?var=&hash=item4d2fdd8630:g:pmEAAOSwjVVVsdUu)
+ - a 5V UBEC to feed power to the Raspberry Pi (http://www.ebay.de/itm/Hobbywing-3A-5V-6V-BEC-UBEC-Einlangsspannung-5-5-26V-2-6-S-Lipo-SBEC-Akku-G-221-/142048845232?_trksid=p2385738.m2548.l4275)
  - 10mm plastic tube (https://www.ebay.de/sch/sis.html?_itemId=null&_nkw=PVC+Schlauch+glasklar+Aquariumschlauch+Luftschlauch+versch+in+5m+Laengen)
  - 20x Gardena micro drippers (https://www.amazon.de/Gardena-1391-20-Micro-Drip-System-Regulierbarer-Endtropfer/dp/B0001E3S9U)
  - a water tank (depending on your needs, I used a 60l one: http://www.ebay.de/itm/25-40-60-L-Fass-Weithalsfass-Vorratsfass-Transporttonne-Fass-Camping-Outdoor)

@@ -1,9 +1,10 @@
 # GoWaterPi
 A plant irigation system based on Raspberry Pi, either manual or at scheduled intervals. A submersible water pump is started to water the plants, then stopped after a configurable time interval.
 
-Currently, a Python script is started by a Cron job at predifined intervals (see http://www.adminschoice.com/crontab-quick-reference). The Python script starts the water pump and keeps it running for a time priod which is specified in a configuration file.
+Currently, the system works in two modes:
+1. a Python script is started by a Cron job at predifined intervals (see http://www.adminschoice.com/crontab-quick-reference). The Python script starts the water pump and keeps it running for a time priod which is specified in a configuration file, OR
 
-The web-page branch can be used to monitor the activity of the watering system over the internet, and switch it on and off remotely. A web-server must be set up, and the server port must be opened in your router to be able to access it from remote locations. Of course, then a wireless USB dongle is needed, which is able to work from inside the case. The web-page version uses Flask and Ajax, an introduction on how to install them can be found here: http://randomnerdtutorials.com/raspberry-pi-web-server-using-flask-to-control-gpios/
+2. a webpage is available at the Raspis webserver to monitor the activity of the watering system over the internet, and switch it on and off remotely. A web-server must be set up, and the server port must be opened in your router to be able to access it from remote locations. Of course, then a wireless USB dongle is needed, which is able to work from inside the case. The web-page version uses Flask and Ajax, an introduction on how to install them can be found here: http://randomnerdtutorials.com/raspberry-pi-web-server-using-flask-to-control-gpios/
 
 Future features:
 - a simple logic to trigger the watering only when needed (eg: not trigger when scheduled if the soil is already wet, or if the weather forecast for your area announces rain with a probability higher than a certain threshold etc.)
@@ -12,6 +13,7 @@ Future features:
 
 What you need:
  - Raspberry Pi board (I used an older Raspberry Pi 1 Model B revision 1.2)
+ - (only if you need remote access to the Raspberry or if the webpage mode is used) a WiFi Dongle. Check this compatibility list before buying! https://elinux.org/RPi_USB_Wi-Fi_Adapters
  - a 8Gb SD card with Raspbian
  - a relay to swotch the water pump (I used this one: https://www.amazon.de/gp/product/B00PIMRGN4)
  - a submersible water pump (http://www.ebay.de/itm/Comet-Tauchpumpe-ELEGANT-12V-Trinkwasserpumpe-Frischwasserpumpe-Kanisterpumpe)

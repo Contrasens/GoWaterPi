@@ -26,10 +26,17 @@ SOIL_SENSOR2_PIN = 24
 PUMP_DEFAULT_ON = False
 
 # How long should the pump run when engaged (in seconds)?
-PUMP_TIME = 60
+# 400s --> ca. 9.8 liters
+# 300s --> ca. 7.9 liters
+# 200s --> ca. 5.4 liters
+PUMP_TIME = 200
 
-# At what hour should the pump turn on?  An integer 0-23.
-PUMP_TIME_ON = 18
+
+
+
+
+# Which IP should be used by the web-server?
+SERVER_IP = '192.168.0.214'
 
 # Which IP should be used by the web-server?
 SERVER_IP = '192.168.0.214'

@@ -1,3 +1,6 @@
+import Adafruit_DHT
+from datetime import datetime
+
 # Which board pin is the automatic pump control connected to?
 PUMP_AUTO_PIN = 4
 
@@ -33,13 +36,27 @@ PUMP_TIME = 200
 
 
 
-
-
-# Which IP should be used by the web-server?
-SERVER_IP = '192.168.0.214'
-
 # Which IP should be used by the web-server?
 SERVER_IP = '192.168.0.214'
 
 # Which port should be used by the web-server?
 PORT = 8080
+
+
+
+# Should I send email notifications?
+EMAIL_ACTIVE = True
+
+# Which address(es) to send emails to?
+EMAIL_TO_ADDRESS = 'dinu.sarbu@gmail.com'
+
+# Which subject should I use after watering the plants?
+EMAIL_SUBJECT_AFTER_WATERING = '[GoWaterPi] Irrigation successful!'
+
+# Which body should I use after watering the plants?
+humidity, temperature = Adafruit_DHT.read_retry(11, TEMPERATURE_PIN)
+EMAIL_BODY_TEXT = 'Hi, the irrigation was successful.' + '\n\n'
+EMAIL_BODY_DATA = str(datetime.now()) + ': Temperature: ' + str(temperature) + '*C, Humidity: ' + str(humidity) + '%\n\n'
+EMAIL_BODY_SIGN = '\GoWaterPi :)'
+
+

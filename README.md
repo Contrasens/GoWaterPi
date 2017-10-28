@@ -6,10 +6,11 @@ Currently, the system works in two modes:
 
 2. a webpage is available at the Raspis webserver to monitor the activity of the watering system over the internet, and switch it on and off remotely. A web-server must be set up, and the server port must be opened in your router to be able to access it from remote locations. Of course, then a wireless USB dongle is needed, which is able to work from inside the case. The web-page version uses Flask and Ajax, an introduction on how to install them can be found here: http://randomnerdtutorials.com/raspberry-pi-web-server-using-flask-to-control-gpios/
 
+NEW FEATURE: Now an email is send to a selected email address when the watering finishes. Info on what packages to install can be found here: https://www.youtube.com/watch?v=0kpGcMjpDcw
+
 Future features:
 - a simple logic to trigger the watering only when needed (eg: not trigger when scheduled if the soil is already wet, or if the weather forecast for your area announces rain with a probability higher than a certain threshold etc.)
 - program the watering schedule in the Google calendar by simply adding events the the system's calendar
-- get the system send emails at important events (eg: watering successfully finished, cancelled due to wet soil/upcoming rain, reminders to refill the water tank etc.)
 
 What you need:
  - Raspberry Pi board (I used an older Raspberry Pi 1 Model B revision 1.2)

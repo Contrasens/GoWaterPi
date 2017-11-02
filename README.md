@@ -2,11 +2,13 @@
 A plant irigation system based on Raspberry Pi, either manual or at scheduled intervals. A submersible water pump is started to water the plants, then stopped after a configurable time interval.
 
 Currently, the system works in two modes:
-1. a Python script is started by a Cron job at predifined intervals (see http://www.adminschoice.com/crontab-quick-reference). The Python script starts the water pump and keeps it running for a time priod which is specified in a configuration file, OR
+1. a Python script is started by a Cron job at predifined intervals (see `http://www.adminschoice.com/crontab-quick-reference`). The Python script starts the water pump and keeps it running for a time priod which is specified in a configuration file, OR
 
-2. a webpage is available at the Raspis webserver to monitor the activity of the watering system over the internet, and switch it on and off remotely. A web-server must be set up, and the server port must be opened in your router to be able to access it from remote locations. Of course, then a wireless USB dongle is needed, which is able to work from inside the case. The web-page version uses Flask and Ajax, an introduction on how to install them can be found here: http://randomnerdtutorials.com/raspberry-pi-web-server-using-flask-to-control-gpios/
+2. a webpage is available at the Raspis webserver to monitor the activity of the watering system over the internet, and switch it on and off remotely. A web-server must be set up, and the server port must be opened in your router to be able to access it from remote locations. Of course, then a wireless USB dongle is needed, which is able to work from inside the case. The web-page version uses Flask and Ajax, an introduction on how to install them can be found here: `http://randomnerdtutorials.com/raspberry-pi-web-server-using-flask-to-control-gpios/`
 
-NEW FEATURE: Now an email is send to a selected email address when the watering finishes. Info on what packages to install can be found here: https://www.youtube.com/watch?v=0kpGcMjpDcw
+Newest feature:
+-----------
+Now an email is send to a selected email address when the watering finishes. Info on what packages to install can be found here: `https://www.youtube.com/watch?v=0kpGcMjpDcw`
 
 Future features:
 - a simple logic to trigger the watering only when needed (eg: not trigger when scheduled if the soil is already wet, or if the weather forecast for your area announces rain with a probability higher than a certain threshold etc.)

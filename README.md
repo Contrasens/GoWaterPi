@@ -6,12 +6,17 @@ Currently, the system works in two modes:
 
 2. a webpage is available at the Raspis webserver to monitor the activity of the watering system over the internet, and switch it on and off remotely. A web-server must be set up, and the server port must be opened in your router to be able to access it from remote locations. Of course, then a wireless USB dongle is needed, which is able to work from inside the case. The web-page version uses Flask and Ajax, an introduction on how to install them can be found here: http://randomnerdtutorials.com/raspberry-pi-web-server-using-flask-to-control-gpios/
 
+Newest feature:
+-----------
+Now an email is send to a selected email address when the watering finishes. Info on what packages to install can be found here: https://www.youtube.com/watch?v=0kpGcMjpDcw
+
 Future features:
-- a simple logic to trigger the watering only when needed (eg: not trigger when scheduled if the soil is already wet, or if the weather forecast for your area announces rain with a probability higher than a certain threshold etc.)
-- program the watering schedule in the Google calendar by simply adding events the the system's calendar
-- get the system send emails at important events (eg: watering successfully finished, cancelled due to wet soil/upcoming rain, reminders to refill the water tank etc.)
+-----------
+ - add a simple logic to trigger the watering only when needed (eg: not trigger when scheduled if the soil is already wet, or if the weather forecast for your area announces rain with a probability higher than a certain threshold etc.)
+ - ability to *program* the watering schedule in the Google calendar by simply adding events the the system's calendar
 
 What you need:
+--------------
  - Raspberry Pi board (I used an older Raspberry Pi 1 Model B revision 1.2)
  - (only if you need remote access to the Raspberry or if the webpage mode is used) a WiFi Dongle. Check this compatibility list before buying! https://elinux.org/RPi_USB_Wi-Fi_Adapters
  - a 8Gb SD card with Raspbian
@@ -27,7 +32,8 @@ What you need:
  - various connectors for the water tubing (http://www.ebay.de/itm/Schlauchverbinder-Kunststoff-Druckluft-Luft-Y-St%C3%BCck-T-St%C3%BCck-Kreuz-Winkel)
  - 2-wire waterproof electrical connectors (https://www.amazon.de/gp/product/B0171FEI1I)
  
- Optional (not used yet by the software in this project, but already prepared for it)
+Optional (not used yet by the software in this project, but everything already prepared)
+------------------------------------------------------------------------
  - 2x soil humidity sensors (http://www.ebay.de/itm/2-St%C3%BCck-Wasserstandssensor-Hygrometer-Bodenfeuchte-Sensor-Feuchtigkeitssensor)
  - 1x DHT11 temperature/humidity sensor - used to monitor the inside of the box (http://www.ebay.de/itm/DHT11-Temperatur-messen-Luftfeuchtigkeit-Sensor-Modul-Raspberry-Pi-Arduino)
  - 1x AM2302 temperature/humidity sensor - used to monitor the outside of the box (http://www.ebay.de/itm/AM2320B-AM2320-DHT22-AM2302-Digital-Feuchtigkeit-Feuchte-Temperatur)

@@ -2,10 +2,10 @@ import smtplib
 import config
 
 smtpUser = ''	# Add here email address to send emails from
-smtpPass = ''	# Add here password of the obove email account
+smtpPass = ''	# Add here password of the above email account
 
 if (smtpUser == '') or (smtpPass == ''): 
-    print "smtpPass or smtpPass not configured!"
+    print "smtpUser or smtpPass not configured!"
     exit(1)
 
 
@@ -27,5 +27,5 @@ s.sendmail(fromAddress, toAddress, header + '\n\n' + body)
 
 s.quit()
 
-
+print "email sent!"
 

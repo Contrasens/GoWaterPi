@@ -41,7 +41,7 @@ if __name__ == '__main__':  # Program start from here
 
     try:
         startPump()
-        time.sleep(config.PUMP_TIME)  # Don't do anything for 1 second
+        time.sleep(config.PUMP_TIME)  # Don't do anything for predefined amount of seconds
         stopPump()
     except KeyboardInterrupt:  # When 'Ctrl+C' is pressed, the child program destroy() will be  executed.
         destroy()

@@ -40,3 +40,22 @@ Optional (not used yet by the software in this project, but everything already p
   - 1x ON-ON waterproof switch (https://www.amazon.de/gp/product/B008IBN07S)
   - several 5mm LEDs, different colors (http://www.ebay.de/itm/Leuchtdiode-5mm-LED-Sortiment-diffus-klar-verschiedene-St%C3%BCckzahl-f%C3%BCr-Arduino)
   - waterproof holders for the LEDs (https://www.amazon.de/gp/product/B00KHTVM8S)
+
+How to install GoWaterPi
+------------------------------------------------------------------------
+1. Install latest Raspbian on an SD card, put into Raspberry Pi and configure it
+2. Get GoWaterPi repository:
+        git clone https://github.com/Contrasens/GoWaterPi.git
+3. Install ADAFRUIT_DHT for Python2
+        sudo apt-get update
+        sudo apt-get install python-pip
+        sudo python -m pip install --upgrade pip setuptools wheel
+        sudo pip install Adafruit_DHT
+3. Install graphical tools for editing cron jobs (together with other useful packages)
+        sudo apt-get install gnome-schedule
+4. Edit crontab to add an entry to execute (in this example everyday at 19:00)
+        0 19 * * * python /home/pi/GoWaterPi/autoWater.py
+5. Edit crontab to send an email everytime when plants got water
+        0 19 * * * python /home/pi/GoWaterPi/send_email.py
+6. Edit send_email.py and add the email account to send email from and its password
+7. Tweak the config parameters from config.py (as is, the plants will be watered for 200 seconds)

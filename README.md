@@ -45,7 +45,9 @@ How to install GoWaterPi
 ------------------------------------------------------------------------
 1. Install latest Raspbian on an SD card, put into Raspberry Pi and configure it
 2. Get GoWaterPi repository:
+```
         git clone https://github.com/Contrasens/GoWaterPi.git
+```
 3. Install ADAFRUIT_DHT for Python2:
 ```
         sudo apt-get update
@@ -55,17 +57,17 @@ How to install GoWaterPi
 ```
 3. Install graphical tools for editing cron jobs (together with other useful packages):
 
-        ```
+```
         sudo apt-get install gnome-schedule
-        ```
+```
         
 4. Edit crontab to add an entry to execute (in this example everyday at 19:00):
-        ```
+```
         0 19 * * * python /home/pi/GoWaterPi/autoWater.py
-        ```
+```
 5. Edit crontab to send an email everytime when plants get water:
-        ```
+```
         0 19 * * * python /home/pi/GoWaterPi/send_email.py
-        ```
+```
 6. Edit send_email.py and add the email account to send email from and its password
 7. Tweak the config parameters from config.py (as is, the plants will be watered for 200 seconds)

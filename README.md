@@ -54,9 +54,11 @@ How to install GoWaterPi
         sudo pip install Adafruit_DHT
 ```
 3. Install graphical tools for editing cron jobs (together with other useful packages):
+
         ```
         sudo apt-get install gnome-schedule
         ```
+        
 4. Edit crontab to add an entry to execute (in this example everyday at 19:00):
         ```
         0 19 * * * python /home/pi/GoWaterPi/autoWater.py

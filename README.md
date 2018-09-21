@@ -8,7 +8,7 @@ Currently, the system works in two modes:
 
 Newest feature:
 -----------
-Now an email is send to a selected email address when the watering finishes. Info on what packages to install can be found here: https://www.youtube.com/watch?v=0kpGcMjpDcw
+Now an email is send to a selected email address when the watering finishes. The email informs about the duration of the watering, time, and internal & external temperature and humidity. Info on what packages to install can be found here: https://www.youtube.com/watch?v=0kpGcMjpDcw
 
 Future features:
 -----------

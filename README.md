@@ -1,7 +1,7 @@
 # GoWaterPi
 A plant irigation system based on Raspberry Pi, either manual or at scheduled intervals. A submersible water pump is started to water the plants, then stopped after a configurable time interval. The scheduling is done via Google Calendar events: one has to add events in the calendar of the irigation system to start the irigation. The irigation duration is configurable. Here you can see how the GoWaterPi looks and works:
-* https://www.youtube.com/watch?v=ZzVHYdjZC1s
-* https://www.youtube.com/watch?v=0p-RnVw8VxA
+* The piping: https://www.youtube.com/watch?v=11Vs_Dfy610
+* The hardware: https://www.youtube.com/watch?v=0p-RnVw8VxA
 
 Currently, the system works in two modes:
 1. a Python script is started by a Cron job at predifined intervals (see http://www.adminschoice.com/crontab-quick-reference). The Python script starts the water pump and keeps it running for a time priod which is specified in a configuration file, OR

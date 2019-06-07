@@ -12,7 +12,7 @@ Newest features:
 -----------
 * Now an email is send to a selected email address when the watering finishes. The email informs about the duration of the watering, time, and internal & external temperature and humidity. Info on what packages to install can be found here: https://www.youtube.com/watch?v=0kpGcMjpDcw
 
-* The irigation system can be fully managed via Google Calendar events (single, recurrent etc). The events are then parsed and a cron job starts at the defined time. Instructions on how to use and configure Google Calendar API can be found in the GCALCron project: https://github.com/fabriceb/gcalcron
+* The irigation system can be fully managed via Google Calendar events (single, recurrent etc). The events are then parsed and a cron job starts at the defined time. Instructions on how to use and configure Google Calendar API can be found in the GCALCron project: https://github.com/fabriceb/gcalcron. Also good instructions on creating Google API key can be found here: https://docs.simplecalendar.io/google-api-key/
 
 Future features:
 -----------

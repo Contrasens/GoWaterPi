@@ -73,4 +73,5 @@ How to install GoWaterPi
         0 19 * * * python /home/pi/GoWaterPi/send_email.py
 ```
 6. Edit send_email.py and add the email account to send email from and its password
-7. Tweak the config parameters from config.py (as is, the plants will be watered for 200 seconds)
+7. It might be that the google account associated with the GoWaterPi will not send you emails. In this case, check that the **Less secure app access** for that account is enabled!
+8. Tweak the config parameters from config.py (as is, the plants will be watered for 200 seconds)

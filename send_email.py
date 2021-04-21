@@ -1,8 +1,8 @@
 import smtplib
 import config
 
-smtpUser = ''	# Add here email address to send emails from
-smtpPass = ''	# Add here password of the above email account
+smtpUser = 'go.water.pi@gmail.com'	# Add here email address to send emails from
+smtpPass = 'sasea.parola6'	# Add here password of the above email account
 
 if (smtpUser == '') or (smtpPass == ''): 
     print "smtpUser or smtpPass not configured!"
@@ -17,6 +17,8 @@ header 	= 'To: ' + toAddress + '\n' + 'From: ' + fromAddress + '\n' + 'Subject: 
 body 	= config.EMAIL_BODY_TEXT + config.EMAIL_BODY_DATA + config.EMAIL_BODY_SIGN
 
 # print header + '\n' + body
+
+print "Sending email to " + toAddress
 
 s = smtplib.SMTP('smtp.gmail.com',587)
 s.ehlo()

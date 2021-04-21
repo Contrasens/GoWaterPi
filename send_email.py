@@ -1,8 +1,8 @@
 import smtplib
 import config
 
-smtpUser = 'go.water.pi@gmail.com'	# Add here email address to send emails from
-smtpPass = 'sasea.parola6'	# Add here password of the above email account
+smtpUser = ''	# Add here email address to send emails from
+smtpPass = ''	# Add here password of the above email account
 
 if (smtpUser == '') or (smtpPass == ''): 
     print "smtpUser or smtpPass not configured!"

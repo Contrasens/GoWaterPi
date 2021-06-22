@@ -35,7 +35,7 @@ PUMP_DEFAULT_ON = False
 # 400s --> ca. 9.8 liters
 # 300s --> ca. 7.9 liters
 # 200s --> ca. 5.4 liters
-PUMP_TIME = 200
+PUMP_TIME = 100
 
 
 

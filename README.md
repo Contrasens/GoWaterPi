@@ -51,12 +51,11 @@ How to install GoWaterPi
 ```
         git clone https://github.com/Contrasens/GoWaterPi.git
 ```
-3. Install ADAFRUIT_DHT for Python2:
+3. Install ADAFRUIT_DHT for Python3:
 ```
         sudo apt-get update
-        sudo apt-get install python-pip
-        sudo python -m pip install --upgrade pip setuptools wheel
-        sudo pip install Adafruit_DHT
+        sudo apt-get install python3-pip
+        follow instructions from https://pypi.org/project/Adafruit-DHT/ to install Adafruit_DHT
 ```
 3. Install graphical tools for editing cron jobs (together with other useful packages):
 

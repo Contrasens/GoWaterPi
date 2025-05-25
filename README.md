@@ -69,8 +69,12 @@ How to install GoWaterPi
 ```
 5. Edit crontab to send an email everytime when plants get water:
 ```
-        0 19 * * * python3 /home/pi/GoWaterPi/email_ifttt.py
+        0 19 * * * python3 /home/pi/GoWaterPi/email_confirm.py
 ```
-6. Edit email_ifttt.py and add the eventID and the API_Key that you got when you created an applet at IFTTT (check this out for detailed instructions: https://anthscomputercave.com/tutorials/ifttt/using_ifttt_web_request_email.html)
-7. It might be that the google account associated with the GoWaterPi will not send you emails. In this case, check that the **Less secure app access** for that account is enabled! LE: this is not working for me anymore so I started using the IFTTT applet that sends an email on webhook.
+6. To get the email_confirm.py to send you email you need:
+   - a working email account that supports SMTP (e.g. Gmail)
+   - for Gmail, you must enable App Passwords and use the generated password in the script
+   - 2FA (two-factor authentication) must be enabled on that account
+   - after 2FA is enabled, you can enable [app passwords](https://support.google.com/accounts/answer/185833) to use the generated password in the script
+   - the Python libraries smtplib and email (standard), plus any sensor libraries you use, must be installed.
 8. Tweak the config parameters from config.py (as is, the plants will be watered for 200 seconds)
